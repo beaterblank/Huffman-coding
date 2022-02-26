@@ -1,0 +1,18 @@
+//reads the header part of the file (file should atleast be of size 512 bytes)
+unsigned short* readHeader(char* fname){
+    FILE* iter = fopen(fname,"rb");
+    unsigned short *buffer = (unsigned short *)malloc(sizeof(unsigned short *)*256);
+    if(iter==NULL)return buffer;
+    fread(buffer,sizeof(buffer),1,iter);
+    fclose(iter);
+    return buffer;
+}
+//reads the text in a text file
+unsigned char* readText(char* fname,long int size){
+    FILE* iter= fopen(fname,"rb");
+    unsigned char *buffer = (unsigned char*)malloc(sizeof(unsigned char)*(int)size);
+    if(iter==NULL)return buffer;
+    fread(buffer,sizeof(buffer),1,iter);
+    fclose(iter);
+    return buffer;
+}
