@@ -2,17 +2,25 @@
 #include <stdlib.h>
 
 //including the coustom functions
-#include "util.c"
-#include "read.c"
+#include "code/util.c"
+#include "code/read.c"
 
+
+
+void readTest(){
+	 //read the header part
+	 unsigned short *buffer = readHeader("test.txt");
+	 printf("%d\n",buffer[0]);
+	 //print size
+	 long int size = findSize("test.txt");
+	 printf("%ld\n",size);
+	 //read first 10 charecters from text file
+	 unsigned char *text = readText("test.txt",size);
+	 printf("%s\n",text);
+
+}
 
 int main(){
-    //read the header part
-    unsigned short *buffer = readHeader("test.txt");
-    printf("%d\n",buffer[0]);
-    long int size = findSize("test.txt");
-    //read first 10 charecters from text file
-    unsigned char *text = readText("test.txt",size);
-    printf("%s\n",text);
-    return 0;
+	readTest();
+   return 0;
 }
