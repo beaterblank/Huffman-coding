@@ -1,4 +1,4 @@
-//reads the header part of the file (file should atleast be of size 512 bytes)
+//reads the header part of the file (file should atleast be of size 512 bits)
 unsigned short* readHeader(char* fname){
     FILE* iter = fopen(fname,"rb");
     unsigned short *buffer = (unsigned short *)malloc(sizeof(unsigned short *)*256);
