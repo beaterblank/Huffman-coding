@@ -47,7 +47,8 @@ void print2DUtil(Hnode *root, int space)
     printf("\n");
     for (int i = COUNT; i < space; i++)
         printf(" ");
-    printf("%d\n", root->c.count);
+    if(root->c.charecter==-1)printf("%d\n", root->c.count);
+    else printf("%c\n", (char)root->c.charecter);
  
     // Process left child
     print2DUtil(root->left, space);

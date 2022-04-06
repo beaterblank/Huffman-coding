@@ -1,42 +1,77 @@
 
-                                                                                                    1
+READ TEST
+count : 25697
+size :34
+text : 
+adfasdhlkdfnasduhfasdfasdijfasldfa
+hashTable : 
+
+char	count
+97	7
+100	7
+102	6
+104	2
+105	1
+106	1
+107	1
+108	2
+110	1
+115	5
+117	1
+MinHeap : 
+
+char	count
+110	1
+105	1
+106	1
+108	2
+117	1
+102	6
+107	1
+100	7
+104	2
+115	5
+97	7
+huffmanTree : 
+
+                                                                                                    n
 
                                                                                           2
 
-                                                                                                    1
+                                                                                                    i
 
                                                                                 3
 
-                                                                                          1
+                                                                                          u
 
                                                                       4
 
-                                                                                1
+                                                                                j
 
                                                             5
 
-                                                                      1
+                                                                      k
 
                                                   7
 
-                                                            2
+                                                            l
 
                                         9
 
-                                                  2
+                                                  h
 
                               14
 
-                                        5
+                                        s
 
                     20
 
-                              6
+                              f
 
           27
 
-                    7
+                    a
 
 34
 
-          7
+          d

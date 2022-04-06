@@ -24,7 +24,7 @@ void readTest(){
 
 void hashTableTest(){
 	insert(readText("test.txt",findSize("test.txt")));
-	//debugTable();
+	debugTable();
 }
 
 // void heapTest(){
@@ -42,16 +42,19 @@ void hashTableTest(){
 
 
 void huffmanTreeTest(){
+	printf("hashTable : \n");
 	hashTableTest();
 	countC* arr = arrify();
 	buildHeap(arr);
+	printf("MinHeap : \n");
+	debugHeap(arr);
 	Hnode* tree = huffmanTree(arr);
+	printf("huffmanTree : \n");
 	print2DUtil(tree,0);
 }
 
 int main(){
-	//readTest();
-	//heapTest();
+	readTest();
 	huffmanTreeTest();
 	return 0;
 }
