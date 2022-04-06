@@ -8,9 +8,9 @@ unsigned short* readHeader(char* fname){
     return buffer;
 }
 //reads the text in a text file
-unsigned char* readText(char* fname,long int size){
+char* readText(char* fname,long int size){
     FILE* iter= fopen(fname,"rb");
-    unsigned char *buffer = (unsigned char*)malloc(sizeof(unsigned char)*(int)size);
+    char *buffer = (char*)malloc(sizeof(char)*(int)size);
     if(iter==NULL)return buffer;
     fread(buffer,sizeof(buffer),1,iter);
     fclose(iter);
