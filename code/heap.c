@@ -1,4 +1,4 @@
-#include "countC.c"
+#include "arrify.c"
 
 void swap(countC* arr,int i,int j){
     countC temp = arr[i];
