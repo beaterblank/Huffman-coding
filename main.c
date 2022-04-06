@@ -9,7 +9,6 @@
 #include "code/write.c"
 #include "code/heap.c"
 
-
 void readTest(){
 	printf("\nREAD TEST\n");
 	//read the header part

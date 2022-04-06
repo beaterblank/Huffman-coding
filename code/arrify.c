@@ -27,3 +27,9 @@ countC* arrify(){
     }
     return arr;
 }
+//swap contents of array
+void swap(countC* arr,int i,int j){
+    countC temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}

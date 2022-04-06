@@ -1,10 +1,5 @@
 #include "arrify.c"
-
-void swap(countC* arr,int i,int j){
-    countC temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
+//heapify the array
 void heapify(countC* arr,int i)
 {
     int smallest = i; 
@@ -17,6 +12,7 @@ void heapify(countC* arr,int i)
         heapify(arr,smallest);
     }
 }
+//build the heap
 void buildHeap(countC* arr)
 {
     int startIdx = (SIZE / 2) - 1;
@@ -25,6 +21,7 @@ void buildHeap(countC* arr)
         heapify(arr,i);
     }
 }
+//get min element and reheap the array
 countC getMin(countC* arr){
     SIZE = SIZE - 1;
     countC temp = arr[0];
@@ -32,7 +29,7 @@ countC getMin(countC* arr){
     buildHeap(arr);
     return temp;
 }
-
+//debugging the heap
 void debugHeap(countC* arr){
     printf("\nchar\tcount\n");
     for(int i=0;i<SIZE;i++){

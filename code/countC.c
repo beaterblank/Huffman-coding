@@ -1,3 +1,4 @@
+//dataStructure to store count of charecters;
 typedef struct countC
 {
     int charecter;
