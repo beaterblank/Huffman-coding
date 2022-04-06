@@ -18,7 +18,6 @@ void insert(char str[])
         freq[hash(str[i])]+=1; 
     }
 }
-
 //debug the hashtable
 void debugTable(){
     printf("\nchar\tcount\n");
