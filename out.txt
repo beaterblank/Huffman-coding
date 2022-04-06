@@ -1,0 +1,51 @@
+
+READ TEST
+count : 25697
+size :34
+text : 
+adfasdhlkdfnasduhfasdfasdijfasldfa
+
+HASH TABLE TEST
+
+char	count
+97	7
+100	7
+102	6
+104	2
+105	1
+106	1
+107	1
+108	2
+110	1
+115	5
+117	1
+
+MIN HEAP TEST
+
+11
+char	count
+110	1
+105	1
+106	1
+108	2
+117	1
+102	6
+107	1
+100	7
+104	2
+115	5
+97	7
+
+10-smmalest :110 - 1
+New array :
+char	count
+105	1
+117	1
+106	1
+108	2
+115	5
+102	6
+107	1
+100	7
+104	2
+97	7
