@@ -42,14 +42,14 @@ void hashTableTest(){
 
 
 void huffmanTreeTest(){
-	printf("hashTable : \n");
+	printf("\nhashTable : ");
 	hashTableTest();
 	countC* arr = arrify();
 	buildHeap(arr);
-	printf("MinHeap : \n");
+	printf("\nMinHeap : ");
 	debugHeap(arr);
 	Hnode* tree = huffmanTree(arr);
-	printf("huffmanTree : \n");
+	printf("\nhuffmanTree :");
 	print2DUtil(tree,0);
 }
 

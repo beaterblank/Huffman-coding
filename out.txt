@@ -4,8 +4,8 @@ count : 25697
 size :34
 text : 
 adfasdhlkdfnasduhfasdfasdijfasldfa
+
 hashTable : 
-
 char	count
 97	7
 100	7
@@ -18,8 +18,8 @@ char	count
 110	1
 115	5
 117	1
+
 MinHeap : 
-
 char	count
 110	1
 105	1
@@ -32,8 +32,8 @@ char	count
 104	2
 115	5
 97	7
-huffmanTree : 
 
+huffmanTree :
                                                                                                     n
 
                                                                                           2
