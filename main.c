@@ -7,7 +7,7 @@
 #include "code/util.c"
 #include "code/read.c"
 #include "code/write.c"
-#include "code/heap.c"
+#include "code/huffman.c"
 
 void readTest(){
 	printf("\nREAD TEST\n");
@@ -24,24 +24,34 @@ void readTest(){
 
 void hashTableTest(){
 	insert(readText("test.txt",findSize("test.txt")));
-	debugTable();
+	//debugTable();
 }
 
-void heapTest(){
-	printf("\nHASH TABLE TEST\n");
+// void heapTest(){
+// 	printf("\nHASH TABLE TEST\n");
+// 	hashTableTest();
+// 	printf("\nMIN HEAP TEST\n");
+// 	countC* arr = arrify();
+// 	printf("\n%d",SIZE);
+// 	buildHeap(arr);
+// 	debugHeap(arr);
+// 	countC small = getMin(arr);
+// 	printf("\n%d-smmalest :%d - %d\nNew array :",SIZE,small.charecter,small.count);
+// 	debugHeap(arr);
+// }
+
+
+void huffmanTreeTest(){
 	hashTableTest();
-	printf("\nMIN HEAP TEST\n");
 	countC* arr = arrify();
-	printf("\n%d",SIZE);
 	buildHeap(arr);
-	debugHeap(arr);
-	countC small = getMin(arr);
-	printf("\n%d-smmalest :%d - %d\nNew array :",SIZE,small.charecter,small.count);
-	debugHeap(arr);
+	Hnode* tree = huffmanTree(arr);
+	print2DUtil(tree,0);
 }
 
 int main(){
-	readTest();
-	heapTest();
+	//readTest();
+	//heapTest();
+	huffmanTreeTest();
 	return 0;
 }

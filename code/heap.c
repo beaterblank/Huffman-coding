@@ -29,6 +29,14 @@ countC getMin(countC* arr){
     buildHeap(arr);
     return temp;
 }
+//initiate heap
+countC* heapInit(char* fileName){
+    insert(readText(fileName,findSize(fileName)));
+    countC* arr = arrify();
+    buildHeap(arr);
+    return arr;
+}
+
 //debugging the heap
 void debugHeap(countC* arr){
     printf("\nchar\tcount\n");
