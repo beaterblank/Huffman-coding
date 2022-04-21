@@ -75,3 +75,7 @@ huffmanTree :
 34
 
           d
+
+finding i : 
+path is :1111111110
+char encode is : ��

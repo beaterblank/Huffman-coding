@@ -2,12 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
 
 //including the custom functions
 #include "code/util.c"
 #include "code/read.c"
 #include "code/write.c"
-#include "code/huffman.c"
+#include "code/search.c"
 
 void readTest(){
 	printf("\nREAD TEST\n");
@@ -51,6 +52,11 @@ void huffmanTreeTest(){
 	Hnode* tree = huffmanTree(arr);
 	printf("\nhuffmanTree :");
 	print2DUtil(tree,0);
+	// char* bin = (char*)malloc(sizeof(char)*(search(tree,'a',0)-1));
+	// binstream(tree,'a',bin);
+	// printf(">%s",bin);
+	//printf("%d",search(tree->right,'a',0));
+	charFromTree(tree,'i');
 }
 
 int main(){

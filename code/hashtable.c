@@ -18,6 +18,14 @@ void insert(char str[])
         freq[hash(str[i])]+=1; 
     }
 }
+
+void readTable(char* fname){
+    unsigned short* buffer = readHeader(fname);
+    for(int i=0;i<256;i++){
+        freq[i] = (int) buffer[i];
+    }
+}
+
 //debug the hashtable
 void debugTable(){
     printf("\nchar\tcount\n");
