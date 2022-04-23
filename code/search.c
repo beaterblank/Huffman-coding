@@ -29,10 +29,33 @@ char* charFromTree(Hnode* tree,char ch){
     if(l>0){
         char* bin = (char*)malloc(sizeof(char)*(l-1));
         binstream(tree,ch,bin);
-        printf("\nfinding %c : ",ch);
-        printf("\npath is :%s",bin);
-        printf("\nchar encode is : %s\n",bin_str(bin,l));
+        // printf("\nfinding %c : ",ch);
+        // printf("\npath is :%s",bin);
+        // printf("\nchar encode is : %s\n",bin_str(bin,l));
         return bin_str(bin,l);
     }
     return NULL;
+}
+
+int getSize(Hnode* tree,char* str,long int length){
+    int ret = 0;
+    for(long int i=0;i<length;i++){
+        int s=search(tree,str[(int)i],0);
+        if(s>0){
+            ret+= (s-1);
+        }
+    }
+    return ret;
+}
+
+char* getbin(Hnode* tree,char* str,long int length){
+    char* bin = (char*)malloc(sizeof(char)*(int)length);
+    for(int i = 0;i<(int)length;i++){
+        char ch = str[i]; 
+        int l = search(tree,ch,0);
+        char* cbin = (char*)malloc(sizeof(char)*(l-1));
+        binstream(tree,ch,cbin);
+        strcat(bin,cbin);
+    }
+    return bin_str(bin,strlen(bin));
 }

@@ -3,7 +3,7 @@ char* concat(char binary[],int length,int times,char ch){
     strcpy(temp,binary);
     for(int i=0;i<times;i++)strncat(temp,&ch,1);
     return temp;
-}
+}   
 
 int getExtra(int length){return 8*((length/8)+1)-length;}
 
@@ -34,7 +34,7 @@ char* bin_str(char binary[],int length){
     int from = 0;
     int to = 7;
     
-    char *ret = (char*)malloc(sizeof(char)*(length/8));
+    char *ret = (char*)malloc(sizeof(char)*((length/8)));
     
     while(to<length){
         char ch = (char)binDec(bin,from,to);
